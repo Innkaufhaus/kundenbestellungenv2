@@ -99,11 +99,23 @@
                     </div>
 
                     <!-- Orders Table -->
-                    <div class="mt-8 flex flex-col">
-                        <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
-                            <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
-                                <div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
-                                    <table class="min-w-full divide-y divide-gray-300">
+                        <div class="mt-8 flex flex-col">
+                            <div class="flex justify-between mb-4">
+                                <button id="refreshOrders" class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700">Refresh</button>
+                                <div>
+                                    <label for="statusFilter" class="mr-2 font-medium text-gray-700">Filter by Status:</label>
+                                    <select id="statusFilter" class="border border-gray-300 rounded-md p-1">
+                                        <option value="all">All</option>
+                                        <option value="Pending">Pending</option>
+                                        <option value="Processing">Processing</option>
+                                        <option value="Completed">Completed</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                                <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
+                                    <div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
+                                        <table class="min-w-full divide-y divide-gray-300">
                                         <thead class="bg-gray-50">
                                             <tr>
                                                 <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900">Order ID</th>

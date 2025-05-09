@@ -47,14 +47,14 @@
                     <div class="px-4 py-5 sm:p-6">
                         <h3 class="text-lg leading-6 font-medium text-gray-900">Create New Order</h3>
                         <div class="mt-5">
-                            <form action="#" method="POST" class="space-y-6">
+                            <form id="createOrderForm" class="space-y-6" onsubmit="return false;">
                                 <!-- Customer Information -->
                                 <div class="space-y-6">
                                     <h4 class="text-md font-medium text-gray-900">Customer Information</h4>
                                     <div class="grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-2">
                                         <div>
-                                            <label for="first_name" class="block text-sm font-medium text-gray-700">First name</label>
-                                            <input type="text" name="first_name" id="first_name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                        <label for="customerName" class="block text-sm font-medium text-gray-700">Customer Name</label>
+                                        <input type="text" name="customerName" id="customerName" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" required>
                                         </div>
 
                                         <div>
@@ -78,19 +78,21 @@
                                 <div class="space-y-6">
                                     <h4 class="text-md font-medium text-gray-900">Order Details</h4>
                                     <div>
-                                        <label for="items" class="block text-sm font-medium text-gray-700">Order Items</label>
+                                        <label for="orderItems" class="block text-sm font-medium text-gray-700">Order Items</label>
                                         <div class="mt-1">
-                                            <textarea id="items" name="items" rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"></textarea>
+                                            <textarea id="orderItems" name="orderItems" rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"></textarea>
                                         </div>
                                         <p class="mt-2 text-sm text-gray-500">List the items and quantities for this order.</p>
                                     </div>
 
                                     <div>
-                                        <label for="notes" class="block text-sm font-medium text-gray-700">Additional Notes</label>
+                                        <label for="additionalNotes" class="block text-sm font-medium text-gray-700">Additional Notes</label>
                                         <div class="mt-1">
-                                            <textarea id="notes" name="notes" rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"></textarea>
+                                            <textarea id="additionalNotes" name="additionalNotes" rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"></textarea>
                                         </div>
                                     </div>
+
+                                    <!-- Removed date input field as date will be set automatically -->
 
                                     <div>
                                         <label for="status" class="block text-sm font-medium text-gray-700">Status</label>
